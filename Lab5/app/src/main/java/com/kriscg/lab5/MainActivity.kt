@@ -140,7 +140,7 @@ fun Pantalla(
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically
-                ) {
+                ) {}
                     Text(
                         text = "MOA",
                         style = MaterialTheme.typography.titleLarge,
@@ -149,7 +149,7 @@ fun Pantalla(
                     )
                     IconButton(
                         onClick = {
-                            val IntentUri = Uri.parse("geo:14.6349,-90.5069?q=MOA")
+                            val IntentUri = Uri.parse("geo:14.6349,-90.5069")
                             val mapIntent = Intent(Intent.ACTION_VIEW, IntentUri)
                             mapIntent.setPackage("com.google.android.apps.maps")
                             context.startActivity(mapIntent)
