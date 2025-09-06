@@ -39,10 +39,10 @@ fun Screen (
     var totalIncrementos by remember { mutableStateOf(0) }
     var totalDecrementos by remember { mutableStateOf(0) }
     val historial = remember { mutableStateListOf<Pair<Int, Boolean>>() }
-    val valorMaximo = 9
-    val valorMinimo = 3
+    val valorMaximo = 100
+    val valorMinimo = 0
 
-
+//modifier = Modifier.fillmaxsize().padding(innerpadding)
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -208,6 +208,8 @@ fun HistorialCard(
 ) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(5),
+        //Podria utilizarse un GridCells.Adaptive()
+        //Gridcells.FixedSize()
         modifier = modifier
             .fillMaxWidth()
             .padding(8.dp),
